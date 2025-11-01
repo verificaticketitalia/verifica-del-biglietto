@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grazie!</title>
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      min-height:100vh;
+      background-color:#007BFF; /* fond bleu */
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      margin-bottom:30px;
+    }
+    .flag-small{ width:56px; border-radius:8px; }
+    h1{ margin:0; font-size:1.5rem; color:#fff; }
+    .sub{ font-size:0.85rem; margin-top:4px; color:#dff0d8; }
+
+    .card{
+      background: rgba(255,255,255,0.1);
+      padding:25px;
+      border-radius:12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      max-width:480px;
+    }
+
+    p{ margin:12px 0; font-size:1.1rem; }
+    a{ color:#fff; text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="italy-flag.png" alt="Bandiera Italiana" class="flag-small">
+    <div>
+      <h1>Verifica del Biglietto</h1>
+      <div class="sub">Servizio governativo italiano</div>
+    </div>
+  </header>
+
+  <section class="card">
+    <h2>Grazie!</h2>
+    <p>La tua richiesta di verifica è stata inviata con successo.</p>
+    <p>Ti risponderemo al più presto all'email fornita.</p>
+    <p><a href="index.html">Torna alla pagina principale</a></p>
+  </section>
+
+</body>
+</html>
